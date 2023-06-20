@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HinhAnh</title>
+	<link rel="stylesheet" type="text/css" href="css/header-footer.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <style type="text/css">
+    	.hinhanh-container{
+         padding-top: 30px;
+    	}
+        .thuvien {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-bottom: 80px;
+        }
+        
+        .thuvien-container{
+            
+        }
+        .thuvien-box{
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }  
+        .thuvien-h2 {
+            padding-left: 150px;
+            padding-bottom: 10px;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-underline-offset: 5px;
+        }
+        .thuvien-h3 {
+            padding-left: 150px; 
+        }
+        .thuvien-span{
+            border-left: #FF0000 solid 4px;
+        }
+        
+        #thuvien-khung-nho {
+            display: flex;
+            animation: tv-slideImages 10s infinite;
+            position: absolute;
+        }
+        
+        #thuvien-khung-nho img {
+            background-color: red;
+            width: 300px;
+            height: 150px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .thuvien-image-item {
+            position: relative;
+            margin: -5px;
+        }
+        .thuvien-image-item img {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .thuvien-image-item:hover img {
+            opacity: 0.7;
+        }
+        
+        .thuvien-image-item .thuvien-image-title {
+            margin-top: -10px;
+            position: absolute;
+            left: 12px;
+            width: 94%;
+            height: 110px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .thuvien-image-item .thuvien-image-title a{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .thuvien-image-item .thuvien-image-title {
+            opacity: 1;
+        }
+        .thuvien-image-item .thuvien-image-title a:hover {
+            color: #FF6666;
+        }
+        
+        .tvha-container {
+            display: flex;      
+            padding-bottom: 8px;
+        }
+        
+        .tvha-box {
+            width: 295px;
+            height: 180px;
+            margin: 5px;
+            background-color: #e6e6fa; /* Màu nền tùy chọn */
+            position: relative;
+        }
+        .thuvien-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: red;
+            opacity: 0;                    
+            transition: opacity 0.3s;
+        }
+
+        .tvha-box:hover .thuvien-overlay {
+            opacity: 1;
+        }
+        .tvha-container .tvha-box img{
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+        .tvha-container .tvha-box:hover img{
+            opacity: 0.7;
+        }
+        .tvha-video-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 17px;
+            height: 17px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+
+        .tvha-video-icon:hover {
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 3);
+        }
+
+
+        
+        .tvha-video-icon:before {
+            content: "";
+            border-style: solid;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent black;
+        }
+        
+        @keyframes tv-slideImages {
+            0% {
+                transform: translateX(0);
+            }
+        
+            20% {
+                transform: translateX(-110px);
+            }
+        
+            40% {
+                transform: translateX(-220px);
+            }
+        
+            60% {
+                transform: translateX(-330px);
+            }
+        
+            80% {
+                transform: translateX(-440px);
+            }
+        
+            100% {
+                transform: translateX(-450px);
+            }
+        }
+
+        .tvha-large-image-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+        }
+        
+        .tvha-large-image {
+            max-width: 600px;
+            max-height: 400px;
+        }
+        .tv-xemthem1{
+            padding-left: 1000px;
+            text-decoration: none;
+        }
+        .tv-xemthem2{
+            padding-left: 970px;
+            text-decoration: none;
+        }
+
+        
+        
+    	
+    </style>
+</head>
+<body>
+    <div id="scrollUpButton">&#8743;</div>
+
+	<div class="header">
+        <a href="index.html"> &#10554; <b>Về trang chủ</b> </a>
+    </div>
+    <div class="container">
+    	<div class="section">
+      		<span class="section-span"><img src="logo-dreamtrips.png" alt="Logo" width="200px" height="70px"></span>
+    	</div>
+    	 <div class="section">
+         	<div class="header1">
+   	 	     	<a href="dulichnhatrang.html" class="header__tag btn">Du lịch Nha Trang </a>&nbsp;
+   	 	   	 	<a href="dulichdanang.html" class="header__tag btn">Du lịch Đà Nẵng </a>&nbsp;
+   	   	    	<a href="dulichphuquoc.html" class="header__tag btn">Du lịch Phú Quốc </a>&nbsp;
+   	  	   	 	<a href="tourkhuyenmai.html" class="header__tag btn">Tour khuyến mãi </a>&nbsp;<br>
+	         	 	<div class="header-phone">
+   	   	 	 	 	 	<div>
+   	   	 	  	 		 	<i class="fas fa-phone-alt"></i>
+         	  	 		 	<a href="tel: 0836 050 104" class="phone"><b>0836 050 104</b></a>
+         	  	 		 	<i class="fas fa-angle-down"></i>&emsp;
+   	     	 	 	    	<i class="fas fa-envelope"></i>
+          	 	      	 	<a href="mailto:ngocntt.22it@vku.udn.vn" class="phone"><b>ngocntt.22it@vku.udn.vn</b></a>
+   	       	 	 	  	</div>
+     	 	 	 	</div>
+   	 	 	</div>
+     	</div>
+    	<div class="section">
+         	<div class="header__right-top ">
+             	<a href="gioithieu.html" class="right"><span>Giới thiệu</span></a>
+             	<a href="lienhe.html" class=""><span>Liên hệ</span></a>
+             	<a href="#" class=""><span>Hình ảnh</span></a>
+                     
+            </div>
+     	</div>
+    </div>
+  
+
+<div class="scrollable-content">
+    <div class="menu">
+    <a href="index.html" class="menu-item">TRANG CHỦ</a>
+    <div class="menu-item">
+      DU LỊCH TRONG NƯỚC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN BẮC</div>
+            <a href="menu/hanoi.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HÀ NỘI</a><br>
+            <a href="menu/mocchau.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;MỘC CHÂU</a><br>
+            <a href="menu/sapa.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;SAPA</a><br>
+            <a href="menu/ninhbinh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NINH BÌNH</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN TRUNG</div>
+            <a href="menu/hue.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HUẾ</a><br>
+            <a href="dulichdanang.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ NẴNG</a><br>
+            <a href="menu/dalat.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ LẠT</a><br>
+            <a href="menu/quynhon.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;QUY NHƠN</a><br>
+            <a href="menu/thanhhoa.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THANH HÓA</a><br>
+            <a href="dilichnhatrang.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NHA TRANG</a><br>
+            
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN NAM</div>
+            <a href="menu/hochiminh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HỒ CHÍ MINH</a><br>
+            <a href="dulichphuquoc.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;PHÚ QUỐC</a><br>
+            <a href="menu/condao.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÔN ĐẢO</a><br>
+            <a href="menu/camau.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÀ MAU</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">TOUR THEO CHỦ ĐỀ</div>
+            <a href="menu/tourtheomua.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR THEO MÙA</a><br>
+            <a href="menu/tourmuathu.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR MÙA THU</a><br>
+            <a href="menu/dulichhe.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH HÈ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      HOT TOUR
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="tourkhuyenmai.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR KHUYẾN MÃI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      COMBO DU LỊCH
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="menu/combo/html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;COMBO</a><br>
+            <a href="index.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;KHÁCH SẠN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      VẬN CHUYỂN
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="menu/thuexe.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THUÊ XE</a><br>
+            <a href="menu/duthuyen.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU THUYỀN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="menu/blogdulich.html" class="menu-item">BLOG DU LỊCH</a>
+    <div class="menu-item">
+      TIN TỨC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THƯ VIỆN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="lienhe.html" class="menu-item">LIÊN HỆ</a>
+  </div>
+</div>
+  
+
+<div class="hinhanh-container">
+	<img src="images/hinhanh/hinhanh-nen.jpg" width="100%" height="500px">
+	<div style="padding-top: 30px;">
+		<div class="thuvien">
+        <h2 class="thuvien-h2">THƯ VIỆN</h2>
+        <h3 class="thuvien-h3"><span class="thuvien-span">&nbsp;</span>VIDEO</h3>
+        <div class="thuvien-container">
+        <div class="thuvien-box">
+            <div id="thuvien-khung-nho">
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/an-vat-moc-chau.jpg" alt="Ảnh 1">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Du lịch ẩm thực Hà Giang</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/moc_chau.jpg" alt="Ảnh 2">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Xin Chào Việt Nam</a>     
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/duong-dong-phu-quoc.jpeg" alt="Ảnh 3">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Khám phá CHỢ DƯƠNG ĐÔNG</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/goi-cuon-tom-thit.jpg" alt="Ảnh 1">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Chợ nổi miền Tây, ăn ngon, rẻ</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/da-lat.jpg" alt="Ảnh 5">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Du lịch Đà Lạt</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                    <a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/my_son.jpg" alt="Ảnh 6">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">9 Địa điểm du lịch đẹp ở Đà Nẵng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h3 class="thuvien-h3"><span class="thuvien-span">&nbsp;</span>HÌNH ẢNH</h3>
+        <div style="padding-left: 150px; padding-top: 10px; padding-bottom: 40px; color: #009999; font-family: Arial, sans-serif;"><i class="fas fa-paper-plane" style="color: #00CCFF; font-size: 25px"></i>&emsp;<b><u>ẨM THỰC</u></b></div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/banh-troi.jpg" alt="Ảnh 21.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/goi-cuon-tom-thit.jpg" alt="Ảnh 22.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/bun-quay-phu-quoc.jpg" alt="Ảnh 23.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/tom-pho-mai.jpg" alt="Ảnh 24.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/cam_nang_du_lich/amthuc_bmt.jpg" alt="Ảnh 25.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/bun-cha-nuong.jpg" alt="Ảnh 6.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/bo-kho.jpg" alt="Ảnh 7.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/pho-ha-noi.jpg" alt="Ảnh 8.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/goi-cuon.jpg" alt="Ảnh 9.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/nhum-bien.jpg" alt="Ảnh 10.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/ca-nuong.jpg" alt="Ảnh 11.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/goi-ca-trich.jpg" alt="Ảnh 12.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-be-chu-lam.jpg" alt="Ảnh 13.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-nha-hang-phuong-dong.jpg" alt="Ảnh 14.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-hai-san.jpg" alt="Ảnh 15.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/tours/ha-banh-can.jpg" alt="Ảnh 16.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-ba-ba.jpg" alt="Ảnh 17.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-thit.jpg" alt="Ảnh 18.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-dac-san-ninh-binh.jpg" alt="Ảnh 19.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-cua-la-lot.jpg" alt="Ảnh 20.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+
+
+
+        <div style="padding-left: 150px; padding-top: 45px; padding-bottom: 40px; color: #009999; font-family: Arial, sans-serif;"><i class="fas fa-paper-plane" style="color: #00CCFF; font-size: 25px"></i>&emsp;<b><u>VIỆT NAM VE ĐẸP BẤT TẬN</u></b></div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/tam-coc.jpg" alt="Ảnh 21.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/thanh-co.jpg" alt="Ảnh 22.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/ninh-binh.jpg" alt="Ảnh 23.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/co-do-hue.jpg" alt="Ảnh 24.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/ninh-binh-1.jpg" alt="Ảnh 25.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/lang-vua-khai-dinh.jpg" alt="Ảnh 26.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/binh-ba.jpg" alt="Ảnh 27.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/Service/phu_quoc.jpg" alt="Ảnh 28.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/ba-na-hill.jpg" alt="Ảnh 29.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/vinpearl-nha-trang.jpg" alt="Ảnh 30.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/da-lat.jpg" alt="Ảnh 31.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/vuon-hoa.jpg" alt="Ảnh 32.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/ho-chi-minh.jpg" alt="Ảnh 33.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/phu-quoc.jpg" alt="Ảnh 34.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/dao-phu-quoc.jpg" alt="Ảnh 35.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/hinhanh/my-son.jpg" alt="Ảnh 36.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/cho-noi-cai-rang.jpg" alt="Ảnh 37.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/can-tho.jpg" alt="Ảnh 38.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/quang-ngai.jpg" alt="Ảnh 39.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/hinhanh/my-son-1.jpg" alt="Ảnh 40.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+
+
+
+
+        <div class="tvha-large-image-container" onclick="hideLargeImage()">
+        <img class="tvha-large-image" src="" alt="Ảnh lớn">
+        </div>
+    </div>
+
+	</div>
+</div>
+
+
+<!--FOOTER-->
+    <div class="footer-container">
+        <div class="footer-box footer-box-1">
+            <div style="padding-left: 70px;">
+             <h3 class="footer-box-lienhe">LIÊN HỆ</h3>
+                <div class="footer-box-font">
+                     <a href="https://www.google.com/maps/dir//Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+Th%C3%B4ng+tin+v%C3%A0+Truy%E1%BB%81n+th%C3%B4ng+Vi%E1%BB%87t+-+H%C3%A0n+470+%C4%90%C6%B0%E1%BB%9Dng+Tr%E1%BA%A7n+%C4%90%E1%BA%A1i+Ngh%C4%A9a+Khu+%C4%91%C3%B4+th%E1%BB%8B+Ng%C5%A9+H%C3%A0nh+S%C6%A1n,+%C4%90%C3%A0+N%E1%BA%B5ng+550000/@15.9752931,108.252355,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3142108997dc971f:0x1295cb3d313469c9!2m2!1d108.252355!2d15.9752931?entry=ttu"><p><b>Văn phòng chính:</b> Hữu nghị Việt - Hàn</p></a>
+                    <a href="tel:0836 050 104"><p>VP: 0836 050 104</p></a>
+                    <a href="tel:0836 050 104"><p>Hotline: 0836 050 104</p></a>
+                    <a href="mailto:ngocntt.22it@vku.udn.vn"><p>Email: ngocntt.22it@vku.udn.vn</p></a><br><br><br>
+                </div>
+                <h3 class="footer-box-lienhe">CHẤP NHẬN THANH TOÁN<h3>
+                <div class="ft-image-container-container">
+                    <div class="ft-image-container"><img src="images/banner/zalopay.png" alt="Image 1"></div>
+                    <div class="ft-image-container"><img src="images/banner/visa.jpg" alt="Image 2"></div>
+                    <div class="ft-image-container"><img src="images/banner/jcb.png" alt="Image 3"></div>
+                    <div class="ft-image-container"><img src="images/banner/napas.png" alt="Image 4"></div>
+                </div>  
+            </div>
+        </div>
+        <div class="footer-box footer-box-2">
+            <div style="text-align: center;">
+                <div style="padding-top: 15px; "><img src="logo-dreamtrips.png" alt="Logo" width="240px" height="80px"></div>
+                <h3 class="footer-box-ketnoi">KẾT NỐI CÙNG CHÚNG TÔI QUA</h3>
+                <div class="social-icons">
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></button>&emsp;
+                </div>
+            </div>
+        </div>
+        <div class="footer-box footer-box-3">
+            <div class="phuongcham">
+                <p>Với phương châm “Sự hài lòng của khách hàng là niềm vui, động lực của chúng tôi” cùng chính sách đa dạng hóa sản phẩm và bảo đảm thực hiện đúng những cam kết về chất lượng, DreamTrips đã định vị trong lòng khách hàng là thương hiệu lữ hành hàng đầu về chất lượng dịch vụ cho khách hàng cùng trải nghiệm.</p>
+                <div class="newsletter">
+                    <h3 class="footer-box-dk">ĐĂNG KÝ NHẬN TIN KHUYẾN MẠI</h3>
+                    <form class="footer-form">
+                        <label for="name" >HỌ VÀ TÊN:</label>
+                        <input type="text" id="name" name="name" required placeholder="Nhập họ và tên">
+                        <label for="email">EMAIL:</label>
+                        <input type="text" id="email" name="email" required placeholder="Nhập email của bạn">
+                        <label for="phone">SỐ ĐIỆN THOẠI:</label>
+                        <input type="text" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn">
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div><div class="vietnam"><br>
+        <hr class="vietnam-hr">
+        <i>Rừng vàng biển bạc <span style="color: #FF3333;">"Việt Nam"</span></i>
+    </div>
+    
+    <div class="goc-footer-container">
+        <a href="tel:0836050104"  title="Gọi tổng đài 08836.050.104">
+        <div class="goc-footer-box" style="background-color: #00CC99;">
+            <i class="fas fa-phone"></i>  
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Chat với DreamTrips trên Facebook">
+        <div class="goc-footer-box" style="background-color: #FF3366;">
+            <i class="fab fa-facebook-messenger"></i>
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Chat với chúng tôi trên Zalo">
+        <div class="goc-footer-box">
+            <img src="images/banner/zalo-icon.png" style="width: 65x; height: 65px;">
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Liên hệ với chúng tôi">
+        <div class="goc-footer-box" style="background-color: #FFCC33;">
+            <i class="fas fa-envelope"></i>
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+    </div>
+
+
+<script src="js/index.js"></script>
+<script src="js/footer.js"></script>
+</body>
+</html>

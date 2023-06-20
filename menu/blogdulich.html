@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+    .rating {
+  cursor: pointer;
+}
+
+.star {
+  display: inline-block;
+  transition: color 0.2s;
+}
+
+.star.hovered,
+.star.selected {
+  color: #ffdd00;
+
+
+}
+.rating-text {
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 17px;
+  color: black;
+}
+.tour_tourmenu{
+  font-family: "Georgia", serif;
+  color: #5F9EA0;
+}
+.tour_4tourmenu{
+            font-family: Georgia, "Times New Roman", Cambria, Baskerville, serif;
+            font-size: 24px;
+            padding-left: 10%;
+            padding-bottom: 25px;
+            font-weight: bold;
+            color: #800000;
+}
+
+.dl_4tourmenu{
+  text-align: center;
+  font-size: 25px;
+  line-height: 18px;  
+}
+
+  </style>
+	
+	<link rel="stylesheet" type="text/css" href="../css/header-footer.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+	<div id="scrollUpButton">&#8743;</div>
+
+	<div class="header">
+        <a href="../index.html"> &#10554; <b>Về trang chủ</b> </a>
+    </div>
+    <div class="container">
+    	<div class="section">
+      		<span class="section-span"><img src="../logo-dreamtrips.png" alt="Logo" width="200px" height="70px"></span>
+    	</div>
+    	 <div class="section">
+         	<div class="header1">
+   	 	     	<a href="../dulichnhatrang.html" class="header__tag btn">Du lịch Nha Trang </a>&nbsp;
+   	 	   	 	<a href="../dulichdanang.html" class="header__tag btn">Du lịch Đà Nẵng </a>&nbsp;
+   	   	    	<a href="../dulichphuquoc.html" class="header__tag btn">Du lịch Phú Quốc </a>&nbsp;
+   	  	   	 	<a href="../tourkhuyenmai.html" class="header__tag btn">Tour khuyến mãi </a>&nbsp;<br>
+	         	 	<div class="header-phone">
+   	   	 	 	 	 	<div>
+   	   	 	  	 		 	<i class="fas fa-phone-alt"></i>
+         	  	 		 	<a href="tel: 0836 050 104" class="phone"><b>0836 050 104</b></a>
+         	  	 		 	<i class="fas fa-angle-down"></i>&emsp;
+   	     	 	 	    	<i class="fas fa-envelope"></i>
+          	 	      	 	<a href="mailto:ngocntt.22it@vku.udn.vn" class="phone"><b>ngocntt.22it@vku.udn.vn</b></a>
+   	       	 	 	  	</div>
+     	 	 	 	</div>
+   	 	 	</div>
+     	</div>
+    	<div class="section">
+         	<div class="header__right-top ">
+             	<a href="../gioithieu.html" class="right"><span>Giới thiệu</span></a>
+             	<a href="../lienhe.html" class=""><span>Liên hệ</span></a>
+             	<a href="../hinhanh.html" class=""><span>Hình ảnh</span></a>
+                     
+            </div>
+     	</div>
+    </div>
+  
+
+<div class="scrollable-content" >
+   <div class="menu">
+    <a href="../index.html" class="menu-item">TRANG CHỦ</a>
+    <div class="menu-item">
+      DU LỊCH TRONG NƯỚC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN BẮC</div>
+            <a href="hanoi.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HÀ NỘI</a><br>
+            <a href="mocchau.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;MỘC CHÂU</a><br>
+            <a href="sapa.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;SAPA</a><br>
+            <a href="ninhbinh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NINH BÌNH</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN TRUNG</div>
+            <a href="hue.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HUẾ</a><br>
+            <a href="../dulichdanang.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ NẴNG</a><br>
+            <a href="dalat.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ LẠT</a><br>
+            <a href="quynhon.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;QUY NHƠN</a><br>
+            <a href="thanhhoa.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THANH HÓA</a><br>
+            <a href="../dulichnhatrang.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NHA TRANG</a><br>
+            
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN NAM</div>
+            <a href="hochiminh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HỒ CHÍ MINH</a><br>
+            <a href="../dulichphuquoc.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;PHÚ QUỐC</a><br>
+            <a href="condao.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÔN ĐẢO</a><br>
+            <a href="camau.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÀ MAU</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">TOUR THEO CHỦ ĐỀ</div>
+            <a href="tourtheomua.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR THEO MÙA</a><br>
+            <a href="tourmuathu.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR MÙA THU</a><br>
+            <a href="dulichhe.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH HÈ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      HOT TOUR
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="../tourkhuyenmai.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR KHUYẾN MÃI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      COMBO DU LỊCH
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="combo.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;COMBO</a><br>
+            <a href="../index.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;KHÁCH SẠN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      VẬN CHUYỂN
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="thuexe.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THUÊ XE</a><br>
+            <a href="duthuyen.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU THUYỀN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="menu-item">BLOG DU LỊCH</a>
+    <div class="menu-item">
+      TIN TỨC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="../hinhanh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THƯ VIỆN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="../lienhe.html" class="menu-item">LIÊN HỆ</a>
+  </div>
+</div>
+
+
+    <div class="dl_4tourmenu">
+      <div class="rating"><h2 class="tour_tourmenu">BLOG DU LỊCH</h2>
+        <span class="rating-text"><b>Đánh giá:</b> </span>
+        <span class="star" onmouseover="highlightStars(1)" onmouseout="resetStars()" onclick="setRating(1)">&#9734;</span>
+        <span class="star" onmouseover="highlightStars(2)" onmouseout="resetStars()" onclick="setRating(2)">&#9734;</span>
+        <span class="star" onmouseover="highlightStars(3)" onmouseout="resetStars()" onclick="setRating(3)">&#9734;</span>
+        <span class="star" onmouseover="highlightStars(4)" onmouseout="resetStars()" onclick="setRating(4)">&#9734;</span>
+        <span class="star" onmouseover="highlightStars(5)" onmouseout="resetStars()" onclick="setRating(5)">&#9734;</span>
+        <span id="ratingText" class="rating-text">Chưa có đánh giá</span>
+      </div>      
+    </div>
+
+<!--CẨM NANG DU LỊCH-->
+<span class="media-cndl"><div style="padding-bottom: 800px;">
+<div class="CNDL-container">
+    <div class="camnangdulich">
+        <h2 class="camnangdulich-h2">CẨM NANG DU LỊCH</h2>
+    </div>
+            <article> <h3 class="article-h3"><span class="article-span">&nbsp;</span> TIN TỨC NỔI BẬT</h3>
+        <div class="camnangdulich-container">
+        <div class="camnangdulich-box">
+            <div id="khung-to">
+                <div id="image-titles"></div>
+            </div>
+            <div id="khung-nho">
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/con_dao.png" alt="Ảnh 1" title="NHỮNG ĐIỂM ĐẾN KHÔNG NÊN BỎ LỠ KHI ĐẾN CÔN ĐẢO">
+                    <div class="image-title">
+                        <a href="#">NHỮNG ĐIỂM ĐẾN KHÔNG NÊN BỎ LỠ KHI ĐẾN CÔN ĐẢO</a>
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+               </div>
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/da-nang.png" alt="Ảnh 2" title="9 ĐỊA ĐIỂM DU LỊCH ĐẸP Ở ĐÀ NẴNG">
+
+                    <div class="image-title">
+                        <a href="#">9 ĐỊA ĐIỂM DU LỊCH ĐẸP Ở ĐÀ NẴNG</a>     
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/moc_chau.jpg" alt="Ảnh 3" title="XIN CHÀO VIỆT NAM">
+                    <div class="image-title">
+                        <a href="#">XIN CHÀO VIỆT NAM</a>
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/an-vat-moc-chau.jpg" alt="Ảnh 1" title="DU LỊCH ẨM THỰC HÀ GIANG">
+                    <div class="image-title">
+                        <a href="#">DU LỊCH ẨM THỰC HÀ GIANG</a>
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/cn_con_dao.jpg" alt="Ảnh 5" title="KINH NGHIỆM ĐI LỄ CÔN ĐẢO">
+                    <div class="image-title">
+                        <a href="#">KINH NGHIỆM ĐI LỄ CÔN ĐẢO</a>
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+                </div>
+                <div class="image-item">
+                    <img src="../images/cam_nang_du_lich/amthuc_bmt.jpg" alt="Ảnh 6" title="MÁCH BẠN TOP MÓN ĂN NGON TẠI BUÔN MA THUỘT">
+                    <div class="image-title">
+                        <a href="#">MÁCH BẠN TOP MÓN ĂN NGON TẠI BUÔN MA THUỘT</a>
+                        <p class="image-date">29/06/2023</p>
+                        <div class="image-title-btn"><a href="#"><button><b>Điểm đến nổi bật</b></button></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+</article>
+            <aside> 
+            <h3 class="aside-h3"><span class="article-span">&nbsp;</span> KINH NGHIỆM DU LỊCH</h3> 
+            <div style="padding-left: 3%;">
+                <div class="aside-container">
+                <div class="aside-box">
+                    <img src="../images/Service/phuong_tien.jpg" alt="Image 1">
+                    <div class="aside-box-content">
+                        <p class="aside-box-content-p"><a href="#">CÁC PHƯƠNG TIỆN DI CHUYỂN AN TOÀN MÙA DỊCH</a></p>
+                        <a href="#"><button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button></a><br>
+                        <span style="font-size: 13px;"><i>29/06/2023</i></span>
+                   </div>
+                </div>
+               <div class="aside-box">
+                    <img src="../images/Service/phu_quoc.jpg" alt="Image 2">
+                    <div class="aside-box-content">
+                        <p class="aside-box-content-p"><a href="#">THỜI ĐIỂM THÍCH HỢP NHẤT TRONG NĂM ĐỂ ĐI PHÚ QUỐC</a></p>
+                        <a href="#"><button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button></a><br>
+                        <span style="font-size: 13px;"><i>29/06/2023</i></span>
+                    </div>
+                </div>
+                <div class="aside-box">
+                    <img src="../images/Service/con_dao.jpg" alt="Image 3">
+                    <div class="aside-box-content">
+                        <p class="aside-box-content-p"><a href="#">KINH NGHIỆM ĐI LỄ Ở CÔN ĐẢO</a></p>
+                        <a href="#"><button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button></a><br>
+                        <span style="font-size: 13px;"><i>29/06/2023</i></span>
+                    </div>
+                </div>
+                <div class="aside-box">
+                    <img src="../images/Service/hn_hay_nt.jpg" alt="Image 4">
+                    <div class="aside-box-content">
+                        <p class="aside-box-content-p"><a href="#">NÊN ĐI NHA TRANG HAY PHÚ QUỐC</a></p>
+                        <a href="#"><button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button></a><br>
+                        <span style="font-size: 13px;"><i>29/06/2023</i></span>
+                    </div>
+                </div>
+            </div>
+                 <div class="camnangdl-dl"><a href="#"><button class="camnangdl-dl-btn">XEM THÊM</button></a></div>
+        </div>
+    </aside>
+</div>
+</div></span>
+
+
+
+        
+
+
+    <!--FOOTER-->
+    <div class="footer-container">
+        <div class="footer-box footer-box-1">
+            <div style="padding-left: 70px;">
+             <h3 class="footer-box-lienhe">LIÊN HỆ</h3>
+                <div class="footer-box-font">
+                     <a href="https://www.google.com/maps/dir//Tr%C6%B0%E1%BB%9Dng+%C4%90%E1%BA%A1i+h%E1%BB%8Dc+C%C3%B4ng+ngh%E1%BB%87+Th%C3%B4ng+tin+v%C3%A0+Truy%E1%BB%81n+th%C3%B4ng+Vi%E1%BB%87t+-+H%C3%A0n+470+%C4%90%C6%B0%E1%BB%9Dng+Tr%E1%BA%A7n+%C4%90%E1%BA%A1i+Ngh%C4%A9a+Khu+%C4%91%C3%B4+th%E1%BB%8B+Ng%C5%A9+H%C3%A0nh+S%C6%A1n,+%C4%90%C3%A0+N%E1%BA%B5ng+550000/@15.9752931,108.252355,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3142108997dc971f:0x1295cb3d313469c9!2m2!1d108.252355!2d15.9752931?entry=ttu"><p><b>Văn phòng chính:</b> Hữu nghị Việt - Hàn</p></a>
+                    <a href="tel:0836 050 104"><p>VP: 0836 050 104</p></a>
+                    <a href="tel:0836 050 104"><p>Hotline: 0836 050 104</p></a>
+                    <a href="mailto:ngocntt.22it@vku.udn.vn"><p>Email: ngocntt.22it@vku.udn.vn</p></a><br><br><br>
+                </div>
+                <h3 class="footer-box-lienhe">CHẤP NHẬN THANH TOÁN<h3>
+                <div class="ft-image-container-container">
+                    <div class="ft-image-container"><img src="../images/banner/zalopay.png" alt="Image 1"></div>
+                    <div class="ft-image-container"><img src="../images/banner/visa.jpg" alt="Image 2"></div>
+                    <div class="ft-image-container"><img src="../images/banner/jcb.png" alt="Image 3"></div>
+                    <div class="ft-image-container"><img src="../images/banner/napas.png" alt="Image 4"></div>
+                </div>  
+            </div>
+        </div>
+        <div class="footer-box footer-box-2">
+            <div style="text-align: center;">
+                <div style="padding-top: 15px; "><img src="../logo-dreamtrips.png" alt="Logo" width="240px" height="80px"></div>
+                <h3 class="footer-box-ketnoi">KẾT NỐI CÙNG CHÚNG TÔI QUA</h3>
+                <div class="social-icons">
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></button>&emsp;
+                <button class="social-icons-btn"><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></button>&emsp;
+                </div>
+            </div>
+        </div>
+        <div class="footer-box footer-box-3">
+            <div class="phuongcham">
+                <p>Với phương châm “Sự hài lòng của khách hàng là niềm vui, động lực của chúng tôi” cùng chính sách đa dạng hóa sản phẩm và bảo đảm thực hiện đúng những cam kết về chất lượng, DreamTrips đã định vị trong lòng khách hàng là thương hiệu lữ hành hàng đầu về chất lượng dịch vụ cho khách hàng cùng trải nghiệm.</p>
+                <div class="newsletter">
+                    <h3 class="footer-box-dk">ĐĂNG KÝ NHẬN TIN KHUYẾN MẠI</h3>
+                    <form class="footer-form">
+                        <label for="name" >HỌ VÀ TÊN:</label>
+                        <input type="text" id="name" name="name" required placeholder="Nhập họ và tên">
+                        <label for="email">EMAIL:</label>
+                        <input type="text" id="email" name="email" required placeholder="Nhập email của bạn">
+                        <label for="phone">SỐ ĐIỆN THOẠI:</label>
+                        <input type="text" id="phone" name="phone" required placeholder="Nhập số điện thoại của bạn">
+                        <button type="submit">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div><div class="vietnam"><br>
+        <hr class="vietnam-hr">
+        <i>Rừng vàng biển bạc <span style="color: #FF3333;">"Việt Nam"</span></i>
+    </div>
+
+
+    <!--GOC-->
+    <div class="goc-footer-container">
+        <a href="tel:0836050104"  title="Gọi tổng đài 08836.050.104">
+        <div class="goc-footer-box" style="background-color: #00CC99;">
+            <i class="fas fa-phone"></i>  
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Chat với DreamTrips trên Facebook">
+        <div class="goc-footer-box" style="background-color: #FF3366;">
+            <i class="fab fa-facebook-messenger"></i>
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Chat với chúng tôi trên Zalo">
+        <div class="goc-footer-box">
+            <img src="../images/banner/zalo-icon.png" style="width: 65x; height: 65px;">
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+        <a href="#" title="Liên hệ với chúng tôi">
+        <div class="goc-footer-box" style="background-color: #FFCC33;">
+            <i class="fas fa-envelope"></i>
+            <div class="goc-tooltip"></div>
+        </div>
+        </a>
+    </div>
+
+<script type="text/javascript" src="../js/4tour.js"></script>
+<script src="../js/index.js"></script>
+<script>
+   var imagess = document.getElementById('khung-nho').getElementsByTagName('img');
+        var currentIndexx = 0;
+
+        function changeImage() {
+            var imageUrl = imagess[currentIndexx].src;
+            document.getElementById('khung-to').style.backgroundImage = `url(${imageUrl})`;
+
+            // Hiển thị tiêu đề của ảnh hiện tại
+            var imageTitle = imagess[currentIndexx].title;
+            document.getElementById('image-titles').innerHTML = `<p>${imageTitle}</p>`;
+
+            currentIndexx = (currentIndexx + 1) % imagess.length;
+        }
+
+        setInterval(changeImage, 3000);
+</script>
+</body>
+</html>

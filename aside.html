@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ảnh và nội dung</title>
+  <style type="text/css">
+    .aside-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 550px;
+      width: 400px;
+      
+    }
+
+    .aside-box {
+      height: 120px;
+      width: 400px;
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 10px;
+    }
+
+    .aside-box img {
+      width: 170px;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .aside-box-content {
+      flex-grow: 1;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+
+    .aside-box-content-p {
+      margin: 0;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      font-size: 15px;
+      padding-bottom: 40px;
+    }
+    .aside-box-content-p a{
+     color: black;
+     text-decoration: none;
+    }
+    .aside-box-content-p a:hover{
+     color: #FF6666;
+    }
+    .aside-kinhnghiem-btn{
+    	border-color: #FF6347;
+        color: #FF3333;
+        border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+  <div style="padding-left: 10px;">
+    <div class="aside-container">
+      <div class="aside-box">
+        <img src="images/Service/phuong_tien.jpg" alt="Image 1">
+        <div class="aside-box-content">
+          <p class="aside-box-content-p"><a href="#">CÁC PHƯƠNG TIỆN DI CHUYỂN AN TOÀN MÙA DỊCH</a></p>
+          <button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button><br>
+          <span style="font-size: 13px;"><i>29/06/2023</i></span>
+        </div>
+      </div>
+      <div class="aside-box">
+        <img src="images/Service/phu_quoc.jpg" alt="Image 2">
+        <div class="aside-box-content">
+          <p class="aside-box-content-p"><a href="#">THỜI ĐIỂM THÍCH HỢP NHẤT TRONG NĂM ĐỂ ĐI PHÚ QUỐC</a></p>
+          <button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button><br>
+          <span style="font-size: 13px;"><i>29/06/2023</i></span>
+        </div>
+      </div>
+      <div class="aside-box">
+        <img src="images/Service/con_dao.jpg" alt="Image 3">
+        <div class="aside-box-content">
+          <p class="aside-box-content-p"><a href="#">KINH NGHIỆM ĐI LỄ Ở CÔN ĐẢO</a></p>
+          <button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button><br>
+          <span style="font-size: 13px;"><i>29/06/2023</i></span>
+        </div>
+      </div>
+      <div class="aside-box">
+        <img src="images/Service/hn_hay_nt.jpg" alt="Image 4">
+        <div class="aside-box-content">
+          <p class="aside-box-content-p"><a href="#">NÊN ĐI NHA TRANG HAY PHÚ QUỐC</a></p>
+          <button class="aside-kinhnghiem-btn">Kinh nghiệm du lịch</button><br>
+          <span style="font-size: 13px;"><i>29/06/2023</i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

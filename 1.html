@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    body {
+  overflow-x: hidden;
+}
+.header { 
+    background: #855A2E;
+    z-index: 111111;
+    width: 100%;
+    transition:all .5s ease-in-out;     
+    font-size: 17.5px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    }
+.header a{
+    margin-left: 150px;
+    color: white;
+    text-decoration: none;
+    }
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: #FFFF99;
+    }
+    .section {
+    padding: 10px;
+    }
+    .section-span{
+    padding-left: 100px;
+    }
+
+.header1 { 
+    padding-top: 10px;
+    position: relative;
+        
+    background-position: center;
+    background-size: 265px;
+    font-size: 16.5px;
+    text-align: center;
+
+    }
+    
+.header__tag{
+    padding: 4px 8px;
+    color: white;
+    background-color: #CF6D21;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
+.btn:hover{
+    background-color: #FF6347;
+    color: white;
+}
+.header-phone{
+    padding: 14px;
+    color: #FF0000;
+    text-shadow: 1px 0px 4px rgba(0, 0, 0, 0.5);
+}
+.phone{
+    text-decoration: none;
+    color: black;
+}
+.header__right-top {
+    padding-top: 7px;
+    padding-bottom: 10px;
+    text-align: center;
+    }
+.header__right-top a {
+    margin: 0 3px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #3b5ba6;
+    font-weight: 600;
+    
+}
+
+
+.slideshow {
+            width: 100%;
+            height: 650px;
+            overflow: hidden;
+            position: relative;
+            z-index: 1; /* Đặt z-index để ảnh nằm phía dưới menu */
+        }
+        
+        .slideshow img {
+            width: 100%;
+            height: 650px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .slideshow img.active {
+            opacity: 1;
+        }
+        
+        .slideshow-controls {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 2; /* Đặt z-index để nút điều khiển nằm trên ảnh */
+        }
+        
+        .slideshow-controls .arrow {
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        /* CSS cho thanh menu */
+        .menu {
+            background-color: #855A2E;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        .menu-item {
+            position: relative;
+            padding: 10px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .menu-item:hover {
+            background-color: #FF6347;
+            color: white;
+        }
+
+        /* CSS cho bảng menu đổ xuống */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            background-color: white;
+            min-width: 200px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            overflow: visible;
+            display: flex;
+            z-index: 3; /* Đặt z-index để menu con nằm trên ảnh */
+            border-radius: 4px;
+        }
+
+        .menu-item:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-column {
+            flex: 1;
+            padding: 0 15px;
+        }
+
+        .sub-dropdown-title {
+            font-weight: bold;
+            color: black;
+            min-width: 170px;
+            margin-bottom: 15px;
+        }
+
+        /* Xóa đường gạch dưới các link */
+        a {
+            text-decoration: none;
+        }
+        
+        .line-height {
+            line-height: 30px;
+            color: #2E8B57;
+        }
+        
+        .line-height:hover {
+            color: #E64C1E;
+        }
+        .line-height-span{
+            color: #FF3333;
+            font-size: 10px;
+        }
+
+         /* Media queries */
+        @media (max-width: 1300px) {
+             .header1{
+              display: none;
+             }
+        }
+
+        @media (max-width: 1040px) {
+            .header__right-top{
+              display: none;
+             }
+        }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+        <a href="#"> &#10554; <b>Về trang chủ</b> </a>
+    </div>
+    <div class="container">
+      <div class="section">
+          <span class="section-span"><img src="logo-dreamtrips.png" alt="Logo" width="200px" height="70px"></span>
+      </div>
+       <div class="section">
+          <div class="header1">
+            <a href="#" class="header__tag btn">Du lịch Nha Trang </a>&nbsp;
+            <a href="#" class="header__tag btn">Du lịch Đà Nẵng </a>&nbsp;
+              <a href="#" class="header__tag btn">Du lịch Phú Quốc </a>&nbsp;
+              <a href="#" class="header__tag btn">Tour khuyến mãi </a>&nbsp;<br>
+              <div class="header-phone">
+                <div>
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel: 0836 050 104" class="phone"><b>0836 050 104</b></a>
+                    <i class="fas fa-angle-down"></i>&emsp;
+                    <i class="fas fa-envelope"></i>
+                        <a href="mailto:ngocntt.22it@vku.udn.vn" class="phone"><b>ngocntt.22it@vku.udn.vn</b></a>
+                    </div>
+            </div>
+        </div>
+      </div>
+      <div class="section">
+          <div class="header__right-top ">
+              <a href="gioithieu.html" class="right"><span>Giới thiệu</span></a>
+              <a href="lienhe.html" class=""><span>Liên hệ</span></a>
+              <a href="hinhanh.html" class=""><span>Hình ảnh</span></a>
+                     
+            </div>
+      </div>
+    </div>
+  
+
+<div class="scrollable-content" >
+   <div class="menu">
+    <a href="#" class="menu-item">TRANG CHỦ</a>
+    <div class="menu-item">
+      DU LỊCH TRONG NƯỚC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN BẮC</div>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HÀ NỘI</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;MỘC CHÂU</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;SAPA</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NINH BÌNH</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN TRUNG</div>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HUẾ</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ NẴNG</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;ĐÀ LẠT</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;QUY NHƠN</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THANH HÓA</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;NHA TRANG</a><br>
+            
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">&nbsp;MIỀN NAM</div>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;HỒ CHÍ MINH</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;PHÚ QUỐC</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÔN ĐẢO</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;CÀ MAU</a>
+          </div>
+        </div>
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <div class="sub-dropdown-title">TOUR THEO CHỦ ĐỀ</div>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR THEO MÙA</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR MÙA THU</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH HÈ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      HOT TOUR
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;TOUR KHUYẾN MÃI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      COMBO DU LỊCH
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;COMBO</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;VOUCHER</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU LỊCH</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;KHÁCH SẠN</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item">
+      VẬN CHUYỂN
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THUÊ XE</a><br>
+            <a href="#" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;DU THUYỀN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="menu-item">BLOG DU LỊCH</a>
+    <div class="menu-item">
+      TIN TỨC
+      <div class="dropdown">
+        <div class="dropdown-column">
+          <div class="sub-dropdown">
+            <a href="hinhanh.html" class="line-height"><span class="line-height-span"><i class="fas fa-check"></i></span>&nbsp;THƯ VIỆN</a><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="menu-item">LIÊN HỆ</a>
+  </div>
+</div>
+
+
+
+  <div class="slideshow">
+    <div class="slideshow-controls">
+        <span class="arrow prev">&lt;</span>
+        <span class="arrow next">&gt;</span>
+    </div>
+
+        <img src="images/banner/Br2.png" alt="Image 1" class="active">
+        <img src="images/banner/Br3.jpg" alt="Image 2">
+        <img src="images/banner/Br1.jpg" alt="Image 3">
+        <img src="images/banner/Br4.jpg" alt="Image 4">
+
+    <div class="table"> 
+        <h3 class="underline">TOUR DU LỊCH</h3>
+        <h4>TOUR TRONG NƯỚC</h4>
+        <div class="underline-1">
+            <select class="select">
+            <option value="">Điểm xuất phát </option>
+            <option value="">Hà Nội</option>
+            <option value="">Huế</option>
+            <option value="">Hồ Chí Minh</option>
+            <option value="">Nam Định</option>
+            <option value="">Đà Nẵng</option>
+            <option value="">Mộc Châu</option>
+            <option value="">Hạ Long</option>
+            <option value="">SaPa</option>
+            <option value="">Đà Lạt</option>
+            <option value="">Quy Nhơn</option>
+            <option value="">Thanh Hóa</option>
+            <option value="">Phú Quốc</option>
+            <option value="">Côn Đảo</option>
+            <option value="">Nha Trang</option>
+            <option value="">Ninh Bình</option>
+            <option value="">Cà Mau</option>
+            <option value="">Tour nghỉ lễ 30-4</option>
+            <option value="">Tour theo mùa</option>
+            <option value="">Tour mùa thu</option>
+            </select>
+            <select class="select">
+            <option value="">Nơi bạn muốn đến </option>
+            <option value="">Hà Nội</option>
+            <option value="">Huế</option>
+            <option value="">Hồ Chí Minh</option>
+            <option value="">Nam Định</option>
+            <option value="">Đà Nẵng</option>
+            <option value="">Mộc Châu</option>
+            <option value="">Hạ Long</option>
+            <option value="">SaPa</option>
+            <option value="">Đà Lạt</option>
+            <option value="">Quy Nhơn</option>
+            <option value="">Thanh Hóa</option>
+            <option value="">Phú Quốc</option>
+            <option value="">Côn Đảo</option>
+            <option value="">Nha Trang</option>
+            <option value="">Ninh Bình</option>
+            <option value="">Cà Mau</option>
+            <option value="">Tour nghỉ lễ 30-4</option>
+            <option value="">Tour theo mùa</option>
+            <option value="">Tour mùa thu</option>
+            </select>
+            <select class="select">
+            <option value="">Lịch trình</option>
+            <option value="">1 Ngày / 0 Đêm</option>
+            <option value="">2 Ngày / 1 Đêm</option>
+            <option value="">3 Ngày / 2 Đêm</option>
+            <option value="">4 Ngày / 3 Đêm</option>
+            <option value="">5 Ngày / 4 Đêm</option>
+            <option value="">6 Ngày / 5 Đêm</option>
+            <option value="">7 Ngày / 6 Đêm</option>
+            <option value="">8 Ngày / 7 Đêm</option>
+            <option value="">9 Ngày / 8 Đêm</option>
+            <option value="">10 Ngày / 9 Đêm</option>
+            </select>
+            <select class="select">
+            <option value="">Khoảng giá</option>
+            <option value="">Dưới 3 Triệu</option>
+            <option value="">Từ 3 Triệu - 10 Triệu</option>
+            <option value="">Từ 10 Triệu - 25 Triệu</option>
+            <option value="">Từ 25 Triệu - 40 Triệu</option>
+            <option value="">Trên 40 Triệu</option>
+            </select>
+            <button class="underline-2">Tìm kiếm</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

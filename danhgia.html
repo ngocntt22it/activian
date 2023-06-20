@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style type="text/css">
+    .form_gui{
+      width: 90%; 
+      height: 450px;
+      text-align: center;
+    }
+    input{
+      width: 90%;
+      height: 25px;
+    }
+    .form_tx{
+      padding-bottom: 2%;
+      text-align: left;
+    }
+    .flex-container {
+      display: flex;
+      width: 91%;
+    }
+    button{
+      height: 30px;
+      width: 91%;
+      text-align: left;
+    }
+    textarea {
+      width: 95%;
+      height: 70px;
+    }
+    .gui_tx{
+      background-color: #CD5C5C; 
+      color: white; 
+      text-align: center; 
+      border-radius: 5px; 
+      border:none; 
+      font-size: 17px;
+    }
+    .gui_container{
+      width: 96%; 
+      height: 40px; 
+      background-color: #CD5C5C; 
+    }
+    .gui_h3{
+      padding-top: 8px; 
+      color:white;
+      text-shadow: 0 0 5px #FF6666;
+    }
+  </style>
+</head>
+<body>
+   <div style="padding-left:13%;">
+        <form class="form_gui">
+            <div class="gui_container">
+                <h3 class="gui_h3">ĐĂNG KÝ NHẬN BÁO GIÁ THUÊ XE DỊCH VỤ</h3>
+            </div>
+
+            <div style="width: 50%; float: left; text-align: left;">
+                <!-- Nội dung phần thứ nhất -->
+                <h3>Thông tin khách hàng</h3>
+                <div class="form_tx"><input type="text" id="full-name" name="full-name" placeholder="Họ & tên" required></div>
+                <div class="form_tx"><input type="email" id="email" name="email" placeholder="Email" required> </div>
+                <div class="form_tx"><input type="tel" id="phone-number" name="phone-number" placeholder="Số điện thoại" required></div>
+                <div class="form_tx"><input type="text" id="diachi" name="dia-chi" placeholder="Địa chỉ" required></div>
+
+            </div>
+            <div style="width: 50%; float: right;text-align: left;">
+                <!-- Nội dung phần thứ hai -->
+                <h3>Thông tin đặt xe</h3>
+                <div class="form_tx"><input type="text" id="diem-di" name="diem-di" placeholder="Điểm đi" required></div>
+                <div class="form_tx"><input type="text" id="diem-den" name="diem-den" placeholder="Điểm đến" required> </div>
+                <div  class="form_tx"><button style="border: none; "><span>Ngày đi:</span><span style="padding-left:31%">Ngày về:</span><span style="padding-left:34%">Loại xe:</span></button></div>
+                <div class="form_tx">
+                  <div class="flex-container">
+                    <input type="date" id="departure-date" name="departure-date" style="margin-right: 5px;">
+                    <input type="date" id="return-date" name="return-date">&emsp;
+                     <select id="car-type" name="car-type" required>
+                      <option value="" disabled selected>Chọn loại xe</option>
+                      <option value="xe1">Loại xe 1</option>
+                      <option value="xe2">Loại xe 2</option>
+                      <option value="xe3">Loại xe 3</option>
+                    </select>
+                  </div>
+                </div>
+                
+            </div>
+           <div class="form_tx">
+                  <textarea id="ghi-chu" name="ghi-chu" placeholder="Ghi chú"></textarea>
+            </div>
+            <div style="width: 10%; padding-left: 43%;">
+                  <button type="submit"  class="gui_tx">Gửi</button>
+                </div>
+         </form>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Example Font Styles</title>
+  <style type="text/css">
+    .serif-fonts {
+      font-family: Georgia, "Times New Roman", Cambria, Baskerville, serif;
+    }
+
+    .sans-serif-fonts {
+      font-family: Arial, Helvetica, "Open Sans", Lato, sans-serif;
+    }
+
+    .display-fonts {
+      font-family: Impact, Lobster, "Playfair Display", Pacifico, cursive;
+    }
+
+    .script-fonts {
+      font-family: "Dancing Script", "Great Vibes", "Lobster Script", Sacramento, cursive;
+    }
+
+    .decorative-fonts {
+      font-family: "Cinzel Decorative", Playball, Monoton, "Permanent Marker", cursive;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="serif-fonts">Serif Fonts</h1>
+  <p class="serif-fonts">This is an example of serif font.</p>
+
+  <h1 class="sans-serif-fonts">Sans-serif Fonts</h1>
+  <p class="sans-serif-fonts">This is an example of sans-serif font.</p>
+
+  <h1 class="display-fonts">Display Fonts</h1>
+  <p class="display-fonts">This is an example of display font.</p>
+
+  <h1 class="script-fonts">Script Fonts</h1>
+  <p class="script-fonts">This is an example of script font.</p>
+
+  <h1 class="decorative-fonts">Decorative Fonts</h1>
+  <p class="decorative-fonts">This is an example of decorative font.</p>
+</body>
+</html>
+ -->

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		button {
+			width: 10%;
+			height: 30px;
+			background-color: #FF6347;
+			border: none;
+			border-radius: 5px;
+			color: white;
+		}
+
+		button:hover {
+			background-color: #FF3333;
+		}
+
+		.giucho {
+			width: 40%;
+			height: 400px;
+			position: absolute;
+			left: 24%;
+			top: 3%;
+			border-radius: 5px;
+			background-image: url('../images/tours/du-lich-ha-long.jpeg');
+			margin: 0 5px;
+			box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+		}
+
+		.giucho:hover {
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.giucho img {
+			width: 100%;
+			height: 100%;
+		}
+
+
+	</style>
+	<script>
+		function hienThiAnh(loai) {
+			var giuchoDiv = document.querySelector('.giucho');
+			var arrowUp = document.querySelector('.arrow-up');
+
+			if (loai === 'thangcanh') {
+				giuchoDiv.innerHTML = '<img src="../images/tours/du-lich-ha-long.jpeg" alt="Ảnh thắng cảnh">';
+				arrowUp.style.left = '24%';
+			} else if (loai === 'amthuc') {
+				giuchoDiv.innerHTML = '<img src="../images/tours/hoi_an.jpg" alt="Ảnh ẩm thực">';
+				arrowUp.style.left = '42%';
+			}
+
+			arrowUp.classList.remove('hidden');
+		}
+	</script>
+</head>
+<body>
+	<div style="padding-left: 10%; padding-top: 1%;">
+		<div style="padding-bottom: 2%;"><button onclick="hienThiAnh('thangcanh')">THẮNG CẢNH</button></div>
+		<div><button onclick="hienThiAnh('amthuc')">ẨM THỰC</button></div>
+		<div class="giucho">
+		</div>
+	</div>
+	<div style="padding-left: 10%; padding-top: 25%;">
+	<div>
+			<h3>Thông tin tour:</h3>
+			<div style="width: 61%;height: 200px; background-color: #FFFACD; padding-top: 5px;padding-left: 2%; font-size: 18px;">
+				<p>Điểm khởi hành</p>
+			</div>
+    </div>
+</div>
+
+</body>
+</html>

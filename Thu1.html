@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Khung ảnh vòng lặp</title>
+    <style type="text/css">
+        .thuvien {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        
+        .thuvien-container{
+        	
+        }
+        .thuvien-box{
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }  
+        .thuvien h2 {
+            padding-left: 150px;
+            padding-bottom: 10px;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-underline-offset: 5px;
+        }
+        .thuvien h3 {
+            padding-left: 150px; 
+        }
+        .thuvien span{
+        	border-left: #FF0000 solid 4px;
+        }
+        
+        #thuvien-khung-nho {
+            display: flex;
+            animation: tv-slideImages 10s infinite;
+            position: absolute;
+        }
+        
+        #thuvien-khung-nho img {
+            background-color: red;
+            width: 300px;
+            height: 150px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        
+        .thuvien-image-item {
+            position: relative;
+            margin: -5px;
+        }
+        .thuvien-image-item img {
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .thuvien-image-item:hover img {
+            opacity: 0.7;
+        }
+        
+        .thuvien-image-item .thuvien-image-title {
+            margin-top: -10px;
+            position: absolute;
+            left: 12px;
+            width: 94%;
+            height: 110px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .thuvien-image-item .thuvien-image-title a{
+        	color: black;
+        	font-weight: bold;
+        	text-decoration: none;
+        	font-size: 18px;
+        }
+        .thuvien-image-item .thuvien-image-title {
+            opacity: 1;
+        }
+        .thuvien-image-item .thuvien-image-title a:hover {
+            color: #FF6666;
+        }
+        
+        .tvha-container {
+            display: flex;      
+            padding-bottom: 8px;
+        }
+        
+        .tvha-box {
+            width: 300px;
+            height: 150px;
+            margin: 5px;
+            background-color: #e6e6fa; /* Màu nền tùy chọn */
+             position: relative;
+        }
+        .thuvien-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: red;
+            opacity: 0;                    
+            transition: opacity 0.3s;
+        }
+
+        .tvha-box:hover .thuvien-overlay {
+            opacity: 1;
+        }
+        .tvha-container .tvha-box img{
+        	width: 100%;
+        	height: 100%;
+        	opacity: 1;
+            transition: opacity 0.3s;
+        }
+        .tvha-container .tvha-box:hover img{
+        	opacity: 0.7;
+        }
+        .tvha-video-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 17px;
+            height: 17px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+
+        .tvha-video-icon:hover {
+        box-shadow: 3px 3px 20px rgba(0, 0, 0, 3);
+        }
+
+
+        
+        .tvha-video-icon:before {
+            content: "";
+            border-style: solid;
+            border-width: 5px 0 5px 10px;
+            border-color: transparent transparent transparent black;
+        }
+        
+        @keyframes tv-slideImages {
+            0% {
+                transform: translateX(0);
+            }
+        
+            20% {
+                transform: translateX(-110px);
+            }
+        
+            40% {
+                transform: translateX(-220px);
+            }
+        
+            60% {
+                transform: translateX(-330px);
+            }
+        
+            80% {
+                transform: translateX(-440px);
+            }
+        
+            100% {
+                transform: translateX(-450px);
+            }
+        }
+
+        .tvha-large-image-container {
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+        }
+        
+        .tvha-large-image {
+            max-width: 600px;
+            max-height: 400px;
+        }
+        .tv-xemthem1{
+            padding-left: 1000px;
+            text-decoration: none;
+        }
+        .tv-xemthem2{
+            padding-left: 970px;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="thuvien">
+        <h2>THƯ VIỆN</h2>
+        <h3><span>&nbsp;</span>VIDEO <a href="#" class="tv-xemthem1"><i>Xem thêm</i></a></h3>
+        <div class="thuvien-container">
+        <div class="thuvien-box">
+            <div id="thuvien-khung-nho">
+                <div class="thuvien-image-item">
+                	<a href="#">
+                	<div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/an-vat-moc-chau.jpg" alt="Ảnh 1">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Du lịch ẩm thực Hà Giang</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                	<a href="#">
+                    <div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/moc_chau.jpg" alt="Ảnh 2">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Xin Chào Việt Nam</a>     
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                	<a href="#">
+                	<div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/hai-tien.jpg" alt="Ảnh 3">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Khám phá CHỢ DƯƠNG ĐÔNG</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                	<a href="#">
+                	<div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/cho-noi.jpg" alt="Ảnh 1">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Chợ nổi miền Tây, ăn ngon, rẻ</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                	<a href="#">
+                	<div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/da-lat.jpg" alt="Ảnh 5">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">Du lịch Đà Lạt</a>
+                    </div>
+                </div>
+                <div class="thuvien-image-item">
+                	<a href="#">
+                	<div class="tvha-video-icon"></div>
+                    <img src="images/cam_nang_du_lich/my_son.jpg" alt="Ảnh 6">
+                    </a>
+                    <div class="thuvien-image-title">
+                        <a href="#">9 Địa điểm du lịch đẹp ở Đà Nẵng</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <h3><span>&nbsp;</span>HÌNH ẢNH <a href="#" class="tv-xemthem2"><i>Xem thêm</i></a></h3>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/tours/ha-cua-la-lot.jpg" alt="Ảnh 1.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-dac-san-ninh-binh.jpg" alt="Ảnh 2.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-thit.jpg" alt="Ảnh 3.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-thung-nham-ninh-binh.jpg" alt="Ảnh 4.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-dieu-luon.jpg" alt="Ảnh 5.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-container">
+            <div class="tvha-box">
+                <img src="images/tours/ha-ba-ba.jpg" alt="Ảnh 6.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-banh-can.jpg" alt="Ảnh 7.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-hai-san.jpg" alt="Ảnh 8.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-nha-hang-phuong-dong.jpg" alt="Ảnh 9.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+            <div class="tvha-box">
+                <img src="images/tours/ha-be-chu-lam.jpg" alt="Ảnh 10.1"  onclick="showLargeImage(this.src)">
+                <div class="thuvien-overlay"></div>
+            </div>
+        </div>
+        <div class="tvha-large-image-container" onclick="hideLargeImage()">
+        <img class="tvha-large-image" src="" alt="Ảnh lớn">
+        </div>
+
+    <script>
+        function showLargeImage(src) {
+            var largeImage = document.querySelector('.tvha-large-image');
+            largeImage.src = src;
+            var largeImageContainer = document.querySelector('.tvha-large-image-container');
+            largeImageContainer.style.display = 'flex';
+        }
+
+        function hideLargeImage() {
+            var largeImageContainer = document.querySelector('.tvha-large-image-container');
+            largeImageContainer.style.display = 'none';
+        }
+    </script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+
+    <style type="text/css">
+        .hottour {
+            background-color: ;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .hottour h2 {
+            padding-left: 150px;
+            padding-bottom: 30px;
+            text-decoration: underline;
+            text-decoration-color: red;
+            text-underline-offset: 5px;
+        }
+
+        .hottour .box-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 20px;
+        }
+
+        .hottour .box {
+            width: 280px;
+            height: 355px;
+            background-color: white;
+            margin: 0 5px;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+        .hottour .box:hover{
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hottour .box1 {
+            position: relative;
+            width: 100%;
+            height: 55%;
+            box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .hottour .box1 img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .hottour .box1:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay-image {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            width: 65px; /* Điều chỉnh kích thước ảnh nhỏ theo ý muốn */
+            height: 65px;
+            pointer-events: none; /* Không cho phép tương tác với ảnh nhỏ */
+            z-index: 1; /* Đảm bảo ảnh nhỏ hiển thị trên ảnh lớn */
+        }
+
+        .overlay-image img {
+            width: 100%;
+            height: 100%;
+            transition: none;
+            position: relative;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 15px; /* Điều chỉnh kích thước chữ theo ý muốn */
+            font-weight: bold; /* Điều chỉnh độ đậm của chữ theo ý muốn */
+            color: white; /* Màu chữ */
+            text-align: center;
+        }
+        .overlay-text span{
+            font-size: 25px;  
+            -webkit-text-stroke: 1.5px white;
+        }
+
+        .hottour .box1:hover .overlay-image img {
+            transform: scale(1); /* Thay đổi giá trị scale thành 1 */
+
+        }
+
+        .option{
+            padding-top: 10px;
+            padding: 6px 13px; /* Added padding to both sides */      
+            width: 100%;
+            line-height: 20px;
+            font-size: 16px;
+            text-shadow: 0px 0px 0.5px rgba(0, 0, 0, 1);
+        }
+         /* CSS for clock icon and duration */
+        .clock-icon {
+            position: absolute;
+            bottom: 6px;
+            left: 10px;
+            width: 20px;
+            height: 20px;
+            background-size: cover;
+            color: white;
+        }
+
+        .duration {
+            position: absolute;
+            bottom: 7px;
+            left: 35px;
+            font-size: 16.5px;
+            color: white;
+        }
+        .box .option b{
+            color: black;
+        }
+        .box .option b:hover{
+            color: #336699;
+        }
+        .box .option a{
+            text-decoration: none;
+        }
+        .option-1{
+            color: #3366CC;
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .option-1 i{
+            padding-right: 10px;
+            font-size: 14px;
+        }
+        .option-2 i{
+            padding-right: 10px;
+            font-size: 14px;
+        }
+        .option-2{
+            display: flex;
+            align-items: center;
+            color: #3366CC;
+            padding-top: 3px;
+        }
+        .option-span1{
+            color: #404040;
+            text-shadow: none;
+            font-size: 14px;
+        }
+        .option-span2{
+            margin-left: auto;
+            margin-right: 30px;
+            color: #404040;
+            font-size: 14px;
+        }
+        .option-span3{
+           margin-left: auto;
+            margin-right: 30px;
+            color: #FF6600;
+           
+        }
+        .option button{
+            height: 28px;
+            width: 100px;
+            background-color: #FF6347;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .option button:hover{
+            background-color: #FF3333;
+        }
+        .option-btn{
+            padding-left: 155px;
+            padding-top: 13px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="hottour">
+        <h2>HOT TOUR</h2>
+        <div class="box-container">
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hoi_an.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>25</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">4 Ngày / 3 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - ĐÀ NẴNG - BÀ NÀ HILL - PHỐ CỔ HỘI AN ( 4 Ngày / 3 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">3,700,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/co_to.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">3 Ngày / 2 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - CÔ TÔ "CHUYỆN TÌNH ĐẢO NHỎ" ( 3 Ngày / 2 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">Tháng 07</span>
+                        <span class="option-span3">3,700,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hill.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">3 Ngày / 2 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - ĐÀ NẴNG - BÀ NÀ HILL - PHỐ CỔ HỘI AN ( 3 Ngày / 2 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">3,200,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hai_tien.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>25</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">3 Ngày / 2 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - BIỂN HẢI TIẾN - THANH HÓA ( 3 Ngày / 2 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">Tháng 06</span>
+                        <span class="option-span3">2,055,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/lang_chai.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>25</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">4 Ngày / 3 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - QUY NHƠN - PHÚ YÊN - <br> VỀ MIỀN ĐẤT VÕ ( 4 Ngày / 3 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">3,905,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hn_phu_quoc.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">3 Ngày / 2 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - PHÚ QUỐC "THIÊN ĐƯỜNG HẠ GIỚI" ( 3 Ngày / 2 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">2,979,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hn_nha_trang.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">4 Ngày / 3 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - NHA TRANG ( 4 Ngày / 3 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">3,200,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/hn_sam_son.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">3 Ngày / 2 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>HÀ NỘI - SẦM SƠN - KHÚC TÌNH <br> CA CỦA BIỂN ( 3 Ngày / 2 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">2,100,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/tay_nguyen.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">4 Ngày / 3 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b>TÂY NGUYÊN HUYỀN THOẠI ( 4 Ngày / 3 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Máy Bay &amp; Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">3,209,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box1">
+                    <a href="#"><img src="images/tours/ha_giang.jpg" alt="Your Image"></a>
+                    
+                    <div class="overlay-image">
+                        <img src="images/tours/group.png" alt="Small Image">
+                        <div class="overlay-text">SALE<br><span>0</span>%</div>
+                    </div>
+                    <div class="clock-icon"><i class="fas fa-clock"></i></div>
+                    <div class="duration">7 Ngày / 6 Đêm</div>
+                </div>
+                <div class="option"><a href="#"><b> HÀ NỘI – HÀ GIANG – CAO BẰNG – LẠNG SƠN ( 7 Ngày / 6 Đêm)</b></a>
+                    <div class="option-1">
+                        <i class="fas fa-walking"></i>
+                        <span class="option-span1">Ô Tô</span>
+                        <span class="option-span2">Giá Từ</span>
+                    </div>
+
+                    <div class="option-2">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="option-span1">2023</span>
+                        <span class="option-span3">5,600,000 Đ</span>
+                    </div>
+                    <div class="option-btn">
+                    <button>Giữ Chỗ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Replace "images/banner/Br1.jpg" with the actual path to your main image file
+        // Replace "path-to-small-image.png" with the actual path to your small overlay image file
+    </script>
+</body>
+</html>
